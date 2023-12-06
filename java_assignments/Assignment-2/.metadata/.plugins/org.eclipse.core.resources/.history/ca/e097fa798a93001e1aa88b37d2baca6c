@@ -1,0 +1,106 @@
+import java.util.Scanner;
+
+class Employee {
+	private String fname;
+	private String lname;
+	private double m_salary;
+	double y_salary;
+	
+	Employee() {
+		
+	}
+
+	public Employee(String fname, String lname, double salary) {
+		super();
+		this.fname = fname;
+		this.lname = lname;
+		
+		if(salary > 0) {
+			this.m_salary = m_salary;
+		}
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public double getSalary() {
+		return m_salary;
+	}
+
+	public void setSalary(double salary) {
+		this.m_salary = salary;
+	}
+	
+	
+	void accept() {
+		
+        Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter First Name: ");
+		this.setFname(sc.nextLine());
+		
+		System.out.println("Enter Last Name: ");
+		this.setLname(sc.nextLine());
+		
+		System.out.println("Enter Salary: ");
+		this.setSalary(sc.nextDouble());
+	}
+	
+	public void yearlySalary() {
+		double y_salary = m_salary * 12;
+	}
+	
+	public void raiseSalary() {
+		y_salary = y_salary + (y_salary * 0.1);
+		System.out.println(y_salary);
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [First Name=" + fname + ", Last Name=" + lname + ", Salary=" + m_salary + "]";
+	}
+	
+	
+}
+
+public class Question_2 {
+
+	public static void main(String[] args) {
+		Employee e1 = new Employee();
+		Employee e2 = new Employee();
+		
+
+		e1.accept();
+		System.out.println(e1);
+		
+		System.out.println("Yeary Salary: ");
+		e1.yearlySalary();
+		System.out.println("Raised salary: ");
+		e1.raiseSalary();
+		
+		
+		
+		e2.accept();
+		System.out.println(e2);
+		
+		System.out.println("Yeary Salary: ");
+		e2.yearlySalary();
+		System.out.println("Raised salary: ");
+		e2.raiseSalary();
+
+	}
+
+}

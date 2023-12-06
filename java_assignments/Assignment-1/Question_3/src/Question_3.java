@@ -1,0 +1,163 @@
+import java.util.Scanner;
+
+public class Question_3 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int quantity;
+        float bill;
+        float total_bill = 0;
+
+        while(true){
+
+        	System.out.println("--------------MENU---------------");
+        	System.out.println("ITEM"+"\t\t\tPRICE");
+        	System.out.println("---------------------------------");
+        	System.out.println("1. Dosa"+"\t\t\t30");
+        	System.out.println("2. Samosa"+"\t\t15");
+        	System.out.println("3. Idli"+"\t\t\t30");
+        	System.out.println("4. Maggie"+"\t\t30");
+        	System.out.println("5. Burger"+"\t\t40");
+        	System.out.println("6. Sandwich"+"\t\t25");
+        	System.out.println("7. Pizza"+"\t\t60");
+        	System.out.println("8. Chicken 65"+"\t\t100");
+        	System.out.println("9. Chicken Wings"+"\t150");
+        	System.out.println("10. Chicken Lollipop"+"\t150");
+        	System.out.println("11. Generate Bill");
+        	System.out.println("---------------------------------");
+
+        System.out.print("Enter your choice : ");
+
+        int choice = sc.nextInt();
+
+        if (choice>=1 && choice <=11) {
+
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Item : Dosa" + " Price = Rs. 30");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 2:
+                    System.out.println("Item : Samosa" + " Price = Rs. 15");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 3:
+                    System.out.println("Item : Idli" + " Price = Rs. 30");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 4:
+                    System.out.println("Item : Maggie" + " Price = Rs. 30");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 5:
+                    System.out.println("Item : Burger" + " Price = Rs. 340");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 6:
+                    System.out.println("Item : Sandwich" + " Price = Rs. 25");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+                    
+                case 7:
+                    System.out.println("Item : Pizza" + " Price = Rs. 60");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+                    
+                case 8:
+                    System.out.println("Item : Chicken 65" + " Price = Rs. 150");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+                    
+                case 9:
+                    System.out.println("Item : Chicken Wings" + " Price = Rs. 150");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                    
+                case 10:
+                    System.out.println("Item : Chicken Lollipop" + " Price = Rs. 150");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 30;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+                    
+                case 11:
+                	 System.out.println("Total Bill : " + total_bill+"\n");
+                     break;
+                    
+
+            }
+
+        }else if (choice == 0) {
+            System.out.println("Bye");
+            break;
+        }
+        }
+
+        }
+    }

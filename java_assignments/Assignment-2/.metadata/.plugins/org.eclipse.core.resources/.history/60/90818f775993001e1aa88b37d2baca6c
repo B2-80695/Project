@@ -1,0 +1,61 @@
+
+class Employee {
+	private String fname;
+	private String lname;
+	private double salary;
+	
+	Employee() {
+		
+	}
+
+	public Employee(String fname, String lname, double salary) {
+		super();
+		this.fname = fname;
+		this.lname = lname;
+		
+		if(salary > 0) {
+			this.salary = salary;
+		}
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [First Name=" + fname + ", Last Name=" + lname + ", Salary=" + salary + "]";
+	}
+	
+	
+}
+
+public class Question_2 {
+
+	public static void main(String[] args) {
+		Employee e1 = new Employee();
+		Employee e2 = new Employee();
+
+	}
+
+}

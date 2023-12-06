@@ -1,0 +1,21 @@
+
+class Employee {
+	String fname;
+	String lname;
+	double salary;
+	
+	Employee() {
+		
+	}
+	
+	
+}
+
+public class Question_2 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

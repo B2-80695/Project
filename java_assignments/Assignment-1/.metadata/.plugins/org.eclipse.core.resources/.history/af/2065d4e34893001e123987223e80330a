@@ -1,0 +1,107 @@
+import java.util.Scanner;
+
+public class Demo {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int quantity;
+        float bill;
+        float total_bill = 0;
+
+        while(true){
+
+        	System.out.println("--------------MENU---------------");
+        	System.out.println("ITEM"+"\t\t\tPRICE");
+        	System.out.println("---------------------------------");
+        	System.out.println("1. Dosa"+"\t\t\t30");
+        	System.out.println("2. Samosa"+"\t\t15");
+        	System.out.println("3. Idli"+"\t\t\t30");
+        	System.out.println("4. Maggie"+"\t\t30");
+        	System.out.println("5. Burger"+"\t\t40");
+        	System.out.println("6. Sandwich"+"\t\t25");
+        	System.out.println("7. Pizza"+"\t\t60");
+        	System.out.println("8. Chicken 65"+"\t\t100");
+        	System.out.println("9. Chicken Wings"+"\t150");
+        	System.out.println("10. Chicken Lollipop"+"\t150");
+        	System.out.println("---------------------------------");
+
+        System.out.print("Enter your choice : ");
+
+        int choice = sc.nextInt();
+
+        if (choice>=1 && choice <=6) {
+
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Food Item : Pizza" + " Price = Rs. 499");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 499;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 2:
+                    System.out.println("Food Item : Pasta" + " Price = Rs. 399");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 399;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 3:
+                    System.out.println("Food Item : Noodles" + " Price = Rs. 150");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 150;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 4:
+                    System.out.println("Food Item : Pav Bhaji" + " Price = Rs. 200");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 200;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 5:
+                    System.out.println("Food Item : Chole Bhature" + " Price = Rs. 180");
+                    System.out.print("Enter Quantity : ");
+                    quantity = sc.nextInt();
+                    System.out.println();
+
+                    bill = quantity * 180;
+                    System.out.println("Bill : " + bill + "\n");
+                    total_bill = total_bill + bill;
+                    break;
+
+                case 6:
+                    System.out.println("Total Bill : " + total_bill+"\n");
+                    break;
+
+
+
+            }
+
+        }else if (choice == 0) {
+            System.out.println("Bye");
+            break;
+        }
+        }
+
+        }
+    }

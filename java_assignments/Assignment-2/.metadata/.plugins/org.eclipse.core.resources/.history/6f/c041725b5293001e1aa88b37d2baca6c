@@ -1,0 +1,111 @@
+import java.util.Scanner;
+
+class Invoice {
+	private String part_number;
+	private String part_description;
+	static private int quantity;
+	private double price;
+	static private double current_bill;
+	
+	static {
+		double current_bill = 0;
+	}
+	
+	public Invoice() {
+		
+	}
+	
+	public Invoice(String part_number, String part_description, int quantity, double price) {
+		this.part_number = part_number;
+		this.part_description = part_description;
+		this.quantity = quantity;
+		this.price = price;
+		
+	}
+
+	public String getPart_number() {
+		return part_number;
+	}
+
+	public void setPart_number(String part_number) {
+		this.part_number = part_number;
+	}
+
+	public String getPart_description() {
+		return part_description;
+	}
+
+	public void setPart_description(String part_description) {
+		this.part_description = part_description;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+		if(this.quantity < 0) {
+			this.quantity = 0;
+		}
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+		if(this.price < 0) {
+			this.price = 0.0;
+		}
+	}
+	
+	
+	double invoiceAmount() {
+		double amount = this.quantity * this.price;
+		return amount;
+	}
+	
+	void accept() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Part number: ");
+		String part_number = sc.nextLine();
+		
+		System.out.println("Enter Part description: ");
+		String part_description = sc.nextLine();
+		
+		System.out.println("Enter Quantity: ");
+		int quantity = sc.nextInt();
+		
+		System.out.println("Enter Price: ");
+	    double price = sc.nextDouble();
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "Invoice [part_number=" + part_number + ", part_description=" + part_description + ", price=" + price
+				+ "]";
+	}
+	
+	
+}
+
+public class Question_1 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);	
+		Invoice i = new Invoice();
+
+
+		i.accept();
+		i.invoiceAmount();
+		System.out.println(i);
+		
+
+	}
+
+}
